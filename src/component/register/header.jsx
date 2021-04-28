@@ -21,7 +21,6 @@ const useStyles = makeStyles((theme) => ({
     display: "flex",
     justify: "center",
     alignItems: "center",
-
     "&:hover": {
       backgroundColor: "#2f745a",
       transition: ".3s ",

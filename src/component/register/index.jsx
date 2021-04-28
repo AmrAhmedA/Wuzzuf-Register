@@ -1,6 +1,8 @@
 import React from "react";
 import { Grid, makeStyles } from "@material-ui/core";
 import RegisterHeader from "./header";
+import DescriptionContainer from "./description";
+import RegisterForm from "./form/registerForm";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -16,7 +18,7 @@ const useStyles = makeStyles((theme) => ({
     },
   },
   mainContainer: {
-    padding: theme.spacing(2),
+    padding: theme.spacing(5),
   },
 }));
 const RegisterContainer = () => {
@@ -30,6 +32,8 @@ const RegisterContainer = () => {
       className={classes.mainContainer}
     >
       <RegisterHeader />
+      <DescriptionContainer />
+      <RegisterForm />
     </Grid>
   );
 };
