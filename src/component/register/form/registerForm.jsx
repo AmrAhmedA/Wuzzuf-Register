@@ -1,10 +1,14 @@
 import React from "react";
-import { Grid } from "@material-ui/core";
+import { Grid, Paper } from "@material-ui/core";
 
-const RegisterForm = () => {
+const RegisterForm = ({ classes }) => {
   return (
-    <Grid container item xs={6}>
-      <h1>amora</h1>
+    <Grid item xs={6}>
+      <Paper variant="outlined" elevation={2} className={classes.formPaper}>
+        <Grid style={{ margin: "30px" }}>
+          <h1>Hello World</h1>
+        </Grid>
+      </Paper>
     </Grid>
   );
 };

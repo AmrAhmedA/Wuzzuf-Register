@@ -26,11 +26,20 @@ const useStyles = makeStyles((theme) => ({
       transition: ".3s ",
     },
   },
+  headerContainer: {
+    margin: "32px 0",
+  },
 }));
 const RegisterHeader = () => {
   const classes = useStyles();
   return (
-    <Grid container direction="row" justify="space-between" alignItems="center">
+    <Grid
+      container
+      direction="row"
+      justify="space-between"
+      alignItems="center"
+      className={classes.headerContainer}
+    >
       <WUZZUFLOGO color="white" />
       <a
         href="https://www.facebook.com/amrahmedgewaly/"
