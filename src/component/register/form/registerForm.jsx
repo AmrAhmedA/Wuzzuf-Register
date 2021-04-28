@@ -33,7 +33,9 @@ const RegisterForm = () => {
     <Grid item xs={6}>
       <Paper variant="outlined" elevation={2} className={classes.formPaper}>
         <Grid style={{ margin: "24px 32px", textAlign: "center" }}>
-          <p className={classes.formHeader}>Hello World</p>
+          <p className={classes.formHeader}>
+            Sign Up and Start Applying For Jobs
+          </p>
           <button className={classes.googleButton}>
             <img
               style={{ position: "absolute", left: "0", top: "0", bottom: "0" }}
