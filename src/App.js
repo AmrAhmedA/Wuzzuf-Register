@@ -1,4 +1,4 @@
-// import './App.css';
+import './App.css';
 import RegisterContainer from './component/form/registerContainer';
 
 function App() {
