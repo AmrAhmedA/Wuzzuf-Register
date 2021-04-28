@@ -1,11 +1,16 @@
 html {
   scroll-behavior: smooth;
   -webkit-font-smoothing: antialiased;
+  background-image: url("./assets/register-bg-fce3e42828b656fb2b08f69c8e77d62e.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+
 }
 * {
   font-family: 'Sora', sans-serif;
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  
+ 
 }
+
