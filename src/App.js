@@ -1,8 +1,8 @@
 import './App.css';
-import RegisterContainer from './component/form/registerContainer';
+import RegisterContainer from './component/register';
 
 function App() {
-  return <div> <RegisterContainer /></div>
+  return <div className="container"> <RegisterContainer /></div>
 }
 
 export default App;

@@ -1,7 +1,7 @@
 import React from "react";
 import { Grid, makeStyles } from "@material-ui/core";
-import DescriptionContainer from "./descriptionContainer";
-import RegisterContainer from "./registerContainer";
+import RegisterHeader from "./header";
+
 const useStyles = makeStyles((theme) => ({
   root: {
     flexGrow: 1,
@@ -15,14 +15,23 @@ const useStyles = makeStyles((theme) => ({
       transition: ".3s",
     },
   },
+  mainContainer: {
+    padding: theme.spacing(2),
+  },
 }));
-const RegisterForm = () => {
-  const classes = useStlyes();
+const RegisterContainer = () => {
+  const classes = useStyles();
   return (
-    <Grid>
-      <DescriptionContainer /> <RegisterContainer />
+    <Grid
+      container
+      direction="row"
+      justify="center"
+      alignItems="center"
+      className={classes.mainContainer}
+    >
+      <RegisterHeader />
     </Grid>
   );
 };
 
-export default RegisterForm;
+export default RegisterContainer;
