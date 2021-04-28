@@ -22,18 +22,9 @@ const useStyles = makeStyles((theme) => ({
   },
   wrapper: {
     padding: "0px 20px",
+    width: "1100px",
     [theme.breakpoints.down("xs")]: {
       padding: "0px 0px",
-    },
-  },
-  formPaper: {
-    transition: ".3s",
-    // width: "488px",
-    [theme.breakpoints.down("sm")]: {
-      paddingTop: "64px",
-      minHeight: "100vh",
-      width: "100%",
-      border: "none",
     },
   },
 }));
@@ -50,7 +41,7 @@ const RegisterContainer = () => {
       <Grid container className={classes.wrapper}>
         <RegisterHeader />
         <DescriptionContainer />
-        <RegisterForm classes={classes} />
+        <RegisterForm />
       </Grid>
     </Grid>
   );

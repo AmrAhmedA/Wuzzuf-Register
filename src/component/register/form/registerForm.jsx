@@ -27,6 +27,16 @@ const useStyles = makeStyles((theme) => ({
       background: "#346ecc",
     },
   },
+  formPaper: {
+    transition: ".3s",
+    // width: "488px",
+    [theme.breakpoints.down("sm")]: {
+      paddingTop: "64px",
+      minHeight: "100vh",
+      width: "100%",
+      border: "none",
+    },
+  },
 }));
 const RegisterForm = () => {
   const classes = useStyles();
@@ -45,7 +55,9 @@ const RegisterForm = () => {
             />
             Sign up with Google
           </button>
-          <DividerWithText>or</DividerWithText>
+          <div style={{ margin: "20px auto" }}>
+            <DividerWithText>or</DividerWithText>
+          </div>
         </Grid>
       </Paper>
     </Grid>
