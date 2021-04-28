@@ -1,6 +1,7 @@
 import React from "react";
 import { Grid, makeStyles, Paper } from "@material-ui/core";
 import googleLogo from "../../../assets/googleLogo/4ed17f1480990b96fc90612ef2f5b5e7.svg";
+import DividerWithText from "../../common/divider";
 const useStyles = makeStyles((theme) => ({
   formHeader: {
     marginBottom: "20px",
@@ -44,6 +45,7 @@ const RegisterForm = () => {
             />
             Sign up with Google
           </button>
+          <DividerWithText>or</DividerWithText>
         </Grid>
       </Paper>
     </Grid>

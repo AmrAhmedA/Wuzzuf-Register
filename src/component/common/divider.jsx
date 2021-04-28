@@ -13,13 +13,13 @@ const useStyles = makeStyles((theme) => ({
   content: {
     paddingTop: theme.spacing(0.5),
     paddingBottom: theme.spacing(0.5),
-    paddingRight: theme.spacing(4),
-    paddingLeft: theme.spacing(4),
-    fontWeight: "bold",
-    fontSize: "1.8rem",
+    paddingRight: theme.spacing(2),
+    paddingLeft: theme.spacing(2),
+    // fontWeight: "bold",
+    fontSize: "1.3rem",
     textAlign: "justify",
 
-    color: "#BF112B",
+    color: "#4D6182",
   },
 }));
 

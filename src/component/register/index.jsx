@@ -18,7 +18,13 @@ const useStyles = makeStyles((theme) => ({
     },
   },
   mainContainer: {
-    padding: theme.spacing(5),
+    padding: "0 50px",
+  },
+  wrapper: {
+    padding: "0px 20px",
+    [theme.breakpoints.down("xs")]: {
+      padding: "0px 0px",
+    },
   },
   formPaper: {
     transition: ".3s",
@@ -41,9 +47,11 @@ const RegisterContainer = () => {
       alignItems="center"
       className={classes.mainContainer}
     >
-      <RegisterHeader />
-      <DescriptionContainer />
-      <RegisterForm classes={classes} />
+      <Grid container className={classes.wrapper}>
+        <RegisterHeader />
+        <DescriptionContainer />
+        <RegisterForm classes={classes} />
+      </Grid>
     </Grid>
   );
 };
