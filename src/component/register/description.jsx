@@ -1,5 +1,13 @@
 import React from "react";
 import { Grid, makeStyles } from "@material-ui/core";
+import vodafone from "../../assets/description/download.png";
+import dhl from "../../assets/description/download (6).png";
+import itworx from "../../assets/description/visa-bacd39ad46073f187dc48d9d193b25d2.png";
+import abk from "../../assets/description/download (2).png";
+import amideast from "../../assets/description/download (3).png";
+import elattal from "../../assets/description/download (1).png";
+import allianz from "../../assets/description/download (5).png";
+import goodmsmart from "../../assets/description/download (4).png";
 const useStyles = makeStyles((theme) => ({
   descriptionContainer: {
     marginTop: "85px",
@@ -20,6 +28,13 @@ const useStyles = makeStyles((theme) => ({
     alignItems: "center",
     marginBottom: "16px",
   },
+  image: {
+    width: "76px",
+    height: "57px",
+    marginRight: "24px",
+    marginBottom: "24px",
+    borderRadius: "4px",
+  },
 }));
 const CheckMark = () => {
   return (
@@ -37,6 +52,17 @@ const items = [
   "Receive alerts for the best jobs",
   "Get discovered by top companies",
   "Explore the right jobs & career opportunities",
+];
+
+const images = [
+  vodafone,
+  elattal,
+  itworx,
+  abk,
+  amideast,
+  goodmsmart,
+  allianz,
+  dhl,
 ];
 const DescriptionContainer = () => {
   const classes = useStyles();
@@ -68,6 +94,16 @@ const DescriptionContainer = () => {
           </li>
         ))}
       </ul>
+
+      <h3 className={classes.descriptionHeader}>
+        Trusted by over 25,000 companies
+      </h3>
+
+      <div style={{ width: "448px", marginBottom: "24px" }}>
+        {images.map((s, n) => (
+          <img className={classes.image} src={s} alt="" key={n} />
+        ))}
+      </div>
     </Grid>
   );
 };
