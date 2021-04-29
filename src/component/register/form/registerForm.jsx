@@ -3,6 +3,7 @@ import { Grid, makeStyles, Paper, withWidth } from "@material-ui/core";
 import googleLogo from "../../../assets/googleLogo/4ed17f1480990b96fc90612ef2f5b5e7.svg";
 import DividerWithText from "../../common/divider";
 import PropTypes from "prop-types";
+import RegisterFooter from "./registerFooter";
 const useStyles = makeStyles((theme) => ({
   formHeader: {
     marginBottom: "20px",
@@ -183,36 +184,7 @@ const RegisterForm = ({ renderInputField, showPassword }) => {
           </Grid>
         </Grid>
       </Paper>
-      <Grid
-        style={{
-          display: "flex",
-          justifyContent: "center",
-          background: "#E6EFFF",
-          height: "51px",
-          borderRadius: "0 0 4px 4px",
-        }}
-      >
-        <p
-          style={{
-            fontSize: "12px",
-            color: " #4D6182",
-            textAlign: "center",
-            padding: "17px 2px 8px",
-          }}
-        >
-          Looking to post jobs?
-          <a
-            href="https://www.facebook.com/amrahmedgewaly/"
-            style={{
-              textDecoration: "none",
-              color: "#0055D9",
-              marginLeft: "8px",
-            }}
-          >
-            Create an Employer Account.
-          </a>
-        </p>
-      </Grid>
+      <RegisterFooter />
     </Grid>
   );
 };
