@@ -25,3 +25,13 @@ ul {
   list-style: none;
 }
 
+
+@media screen and (max-width: 958px) {
+  .container {
+    background-image: none;
+    background-color: white;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height:100vh;
+  }
+}

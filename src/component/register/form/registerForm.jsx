@@ -1,7 +1,8 @@
 import React from "react";
-import { Grid, makeStyles, Paper } from "@material-ui/core";
+import { Grid, makeStyles, Paper, withWidth } from "@material-ui/core";
 import googleLogo from "../../../assets/googleLogo/4ed17f1480990b96fc90612ef2f5b5e7.svg";
 import DividerWithText from "../../common/divider";
+import PropTypes from "prop-types";
 const useStyles = makeStyles((theme) => ({
   formHeader: {
     marginBottom: "20px",
@@ -61,10 +62,10 @@ const useStyles = makeStyles((theme) => ({
     },
   },
 }));
-const RegisterForm = ({ renderInputField, showPassword }) => {
+const RegisterForm = ({ renderInputField, showPassword, width }) => {
   const classes = useStyles();
   return (
-    <Grid item xs={6}>
+    <Grid item xs={12} sm={8} md={6}>
       <Paper variant="outlined" elevation={2} className={classes.formPaper}>
         <Grid style={{ margin: "24px 32px" }}>
           <p className={classes.formHeader}>
@@ -72,7 +73,12 @@ const RegisterForm = ({ renderInputField, showPassword }) => {
           </p>
           <button className={classes.googleButton}>
             <img
-              style={{ position: "absolute", left: "0", top: "0", bottom: "0" }}
+              style={{
+                position: "absolute",
+                left: "0",
+                top: "0",
+                bottom: "0",
+              }}
               src={googleLogo}
               alt=""
             />
@@ -131,4 +137,8 @@ const RegisterForm = ({ renderInputField, showPassword }) => {
   );
 };
 
-export default RegisterForm;
+RegisterForm.propTypes = {
+  width: PropTypes.oneOf(["lg", "md", "sm", "xl", "xs"]).isRequired,
+};
+
+export default withWidth()(RegisterForm);

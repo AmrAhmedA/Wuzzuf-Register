@@ -77,7 +77,7 @@ const DescriptionContainer = () => {
       <h3 className={classes.descriptionHeader}>Find the Best Jobs in Egypt</h3>
       <ul>
         {items.map((d, n) => (
-          <li className={classes.descriptionItem}>
+          <li className={classes.descriptionItem} key={n}>
             <i
               style={{
                 display: "inline-flex",

@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Grid, makeStyles } from "@material-ui/core";
+import { Grid, Hidden, makeStyles } from "@material-ui/core";
 import RegisterHeader from "./header";
 import DescriptionContainer from "./description";
 import RegisterForm from "./form/registerForm";
@@ -26,8 +26,11 @@ const useStyles = makeStyles((theme) => ({
   wrapper: {
     padding: "0px 20px",
     width: "1100px",
-    [theme.breakpoints.down("xs")]: {
+    [theme.breakpoints.down("sm")]: {
       padding: "0px 0px",
+      justifyContent: "center",
+      alignItems: "center",
+      flexDirection: "row",
     },
   },
 }));
@@ -110,7 +113,9 @@ const RegisterContainer = () => {
     >
       <Grid container className={classes.wrapper}>
         <RegisterHeader />
-        <DescriptionContainer />
+        <Hidden smDown>
+          <DescriptionContainer />
+        </Hidden>
         <RegisterForm
           renderInputField={renderInputField}
           showPassword={showPassword}
