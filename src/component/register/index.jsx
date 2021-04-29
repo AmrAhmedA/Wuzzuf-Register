@@ -1,8 +1,11 @@
-import React from "react";
+import React, { useState } from "react";
 import { Grid, makeStyles } from "@material-ui/core";
 import RegisterHeader from "./header";
 import DescriptionContainer from "./description";
 import RegisterForm from "./form/registerForm";
+import Input from "../common/input";
+import RegisterFormValidation from "./registerFormValidation";
+const yup = require("yup");
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -28,8 +31,76 @@ const useStyles = makeStyles((theme) => ({
     },
   },
 }));
+
+const initialFieldValues = {
+  username: "",
+  firstname: "",
+  lastname: "",
+  email: "",
+  password: "",
+};
+
 const RegisterContainer = () => {
+  const [values, setValues] = useState(initialFieldValues);
+  const [errors, setErrors] = useState({});
+  const [showPassword, setShowPassword] = useState(false);
   const classes = useStyles();
+
+  const handleClickShowPassword = () => {
+    setShowPassword(!showPassword);
+  };
+
+  const validateProperty = (name, value) => {
+    yup
+      .reach(RegisterFormValidation, name)
+      .validate(value)
+      .then(() => {
+        let { [name]: omit, ...res } = errors;
+        setErrors(res);
+      })
+      .catch((e) => {
+        setErrors({ ...errors, [name]: e.message });
+      });
+  };
+
+  const handleInputChange = (event) => {
+    const { name, value } = event.target;
+    setValues({
+      ...values,
+      [name]: value,
+    });
+    validateProperty(name, value);
+    console.log("mora", errors);
+  };
+
+  const renderInput = (
+    id,
+    name,
+    label,
+    type,
+    placeholder,
+    direction,
+    float,
+    disabled
+  ) => {
+    return (
+      <Input
+        id={id}
+        name={name}
+        label={label}
+        type={type}
+        placeholder={placeholder}
+        onChange={handleInputChange}
+        error={errors[name]}
+        value={values[name]}
+        direction={direction}
+        float={float}
+        disabled={disabled}
+        handleClickShowPassword={handleClickShowPassword}
+        showPassword={showPassword}
+      />
+    );
+  };
   return (
     <Grid
       container
