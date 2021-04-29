@@ -32,7 +32,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-const initialFieldValues = {
+const registerFieldValues = {
   firstName: "",
   lastName: "",
   email: "",
@@ -40,7 +40,7 @@ const initialFieldValues = {
 };
 
 const RegisterContainer = () => {
-  const [values, setValues] = useState(initialFieldValues);
+  const [values, setValues] = useState(registerFieldValues);
   const [errors, setErrors] = useState({});
   const [showPassword, setShowPassword] = useState(false);
   const classes = useStyles();
