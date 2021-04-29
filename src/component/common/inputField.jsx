@@ -1,5 +1,6 @@
 import React, { memo } from "react";
-import { makeStyles } from "@material-ui/core";
+import { IconButton, makeStyles } from "@material-ui/core";
+import { Visibility, VisibilityOff } from "@material-ui/icons";
 
 const useStyles = makeStyles((theme) => ({
   inputfield: {
@@ -43,6 +44,7 @@ const InputField = memo((props) => {
     showPassword,
     disabled,
     type,
+    handleClickShowPassword,
     ...rest
   } = props;
   return (
@@ -61,18 +63,35 @@ const InputField = memo((props) => {
           {label}
         </label>
       </div>
-      <input
-        className={classes.inputfield}
-        type={type}
-        dir={direction}
-        id={id}
-        name={name}
-        value={value}
-        label={label}
-        onChange={onChange}
-        {...rest}
-        disabled={disabled}
-      />
+      <div style={{ position: "relative" }}>
+        <input
+          className={classes.inputfield}
+          type={type}
+          dir={direction}
+          id={id}
+          name={name}
+          value={value}
+          label={label}
+          onChange={onChange}
+          {...rest}
+          disabled={disabled}
+        />
+        {name == "password" ? (
+          <IconButton
+            style={{
+              position: "absolute",
+              right: "0",
+              top: "20px",
+              bottom: "0",
+            }}
+            aria-label="toggle password visibility"
+            onClick={handleClickShowPassword}
+            // onMouseDown={handleMouseDownPassword}
+          >
+            {showPassword ? <Visibility /> : <VisibilityOff />}
+          </IconButton>
+        ) : null}
+      </div>
       <div
         style={{
           color: "rgb(254, 48, 48)",

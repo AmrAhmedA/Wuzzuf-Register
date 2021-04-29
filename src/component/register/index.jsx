@@ -126,6 +126,7 @@ const RegisterContainer = () => {
         float={float}
         disabled={disabled}
         showPassword={showPassword}
+        handleClickShowPassword={handleClickShowPassword}
       />
     );
   };

@@ -98,7 +98,7 @@ const RegisterForm = ({
               "",
               "ltr"
             )}
-            <IconButton
+            {/* <IconButton
               style={{
                 position: "absolute",
                 right: "0",
@@ -110,7 +110,7 @@ const RegisterForm = ({
               // onMouseDown={handleMouseDownPassword}
             >
               {showPassword ? <Visibility /> : <VisibilityOff />}
-            </IconButton>
+            </IconButton> */}
           </Grid>
         </Grid>
       </Paper>
