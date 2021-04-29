@@ -35,7 +35,7 @@ const RegisterHeader = ({ width }) => {
   const classes = useStyles();
   console.log(width);
   const isTabletMode = () => {
-    return width === "xs" || width === "sm";
+    return width === "sm" || width === "xs" ? true : false;
   };
   console.log(isTabletMode());
   return (
