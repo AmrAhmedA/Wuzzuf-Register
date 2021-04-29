@@ -34,8 +34,8 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 const initialFieldValues = {
-  firstname: "",
-  lastname: "",
+  firstName: "",
+  lastName: "",
   email: "",
   password: "",
 };
@@ -125,6 +125,7 @@ const RegisterContainer = () => {
         direction={direction}
         float={float}
         disabled={disabled}
+        showPassword={showPassword}
       />
     );
   };
@@ -139,7 +140,11 @@ const RegisterContainer = () => {
       <Grid container className={classes.wrapper}>
         <RegisterHeader />
         <DescriptionContainer />
-        <RegisterForm renderInputField={renderInputField} />
+        <RegisterForm
+          renderInputField={renderInputField}
+          showPassword={showPassword}
+          handleClickShowPassword={handleClickShowPassword}
+        />
       </Grid>
     </Grid>
   );

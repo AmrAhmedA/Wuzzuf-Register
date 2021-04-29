@@ -40,7 +40,11 @@ const useStyles = makeStyles((theme) => ({
     },
   },
 }));
-const RegisterForm = ({ renderInputField }) => {
+const RegisterForm = ({
+  renderInputField,
+  showPassword,
+  handleClickShowPassword,
+}) => {
   const classes = useStyles();
   return (
     <Grid item xs={6}>
@@ -89,8 +93,8 @@ const RegisterForm = ({ renderInputField }) => {
             {renderInputField(
               "password",
               "password",
-              " Password",
-              "text",
+              "Password",
+              showPassword ? "text" : "password",
               "",
               "ltr"
             )}
@@ -102,10 +106,10 @@ const RegisterForm = ({ renderInputField }) => {
                 bottom: "0",
               }}
               aria-label="toggle password visibility"
-              // onClick={handleClickShowPassword}
+              onClick={handleClickShowPassword}
               // onMouseDown={handleMouseDownPassword}
             >
-              {true ? <Visibility /> : <VisibilityOff />}
+              {showPassword ? <Visibility /> : <VisibilityOff />}
             </IconButton>
           </Grid>
         </Grid>

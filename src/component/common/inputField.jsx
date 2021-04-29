@@ -40,10 +40,11 @@ const InputField = memo((props) => {
     direction,
     error,
     float,
+    showPassword,
     disabled,
+    type,
     ...rest
   } = props;
-
   return (
     <div>
       <div style={{ marginBottom: "4px" }}>
@@ -62,7 +63,7 @@ const InputField = memo((props) => {
       </div>
       <input
         className={classes.inputfield}
-        type="text"
+        type={type}
         dir={direction}
         id={id}
         name={name}
