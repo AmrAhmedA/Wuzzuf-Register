@@ -3,7 +3,6 @@ import { Grid, makeStyles } from "@material-ui/core";
 import RegisterHeader from "./header";
 import DescriptionContainer from "./description";
 import RegisterForm from "./form/registerForm";
-import Input from "../common/input";
 import RegisterFormValidation from "./registerFormValidation";
 import InputField from "../common/inputField";
 const yup = require("yup");
@@ -71,35 +70,6 @@ const RegisterContainer = () => {
     });
     validateProperty(name, value);
     console.log("mora", errors);
-  };
-
-  const renderInput = (
-    id,
-    name,
-    label,
-    type,
-    placeholder,
-    direction,
-    float,
-    disabled
-  ) => {
-    return (
-      <Input
-        id={id}
-        name={name}
-        label={label}
-        type={type}
-        placeholder={placeholder}
-        onChange={handleInputChange}
-        error={errors[name]}
-        value={values[name]}
-        direction={direction}
-        float={float}
-        disabled={disabled}
-        handleClickShowPassword={handleClickShowPassword}
-        showPassword={showPassword}
-      />
-    );
   };
 
   const renderInputField = (

@@ -76,7 +76,7 @@ const InputField = memo((props) => {
           {...rest}
           disabled={disabled}
         />
-        {name == "password" ? (
+        {name === "password" ? (
           <IconButton
             style={{
               position: "absolute",

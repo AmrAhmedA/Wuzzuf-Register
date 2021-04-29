@@ -1,8 +1,7 @@
 import React from "react";
-import { Grid, IconButton, makeStyles, Paper } from "@material-ui/core";
+import { Grid, makeStyles, Paper } from "@material-ui/core";
 import googleLogo from "../../../assets/googleLogo/4ed17f1480990b96fc90612ef2f5b5e7.svg";
 import DividerWithText from "../../common/divider";
-import { Visibility, VisibilityOff } from "@material-ui/icons";
 const useStyles = makeStyles((theme) => ({
   formHeader: {
     marginBottom: "20px",
@@ -25,6 +24,7 @@ const useStyles = makeStyles((theme) => ({
     background: "#4285f4",
     color: "#ffffff",
     cursor: "pointer",
+    transition: ".3s",
     "&:hover": {
       background: "#346ecc",
     },
@@ -39,12 +39,29 @@ const useStyles = makeStyles((theme) => ({
       border: "none",
     },
   },
+  signupButton: {
+    justifyContent: "center",
+    alignItems: "center",
+    fontSize: "15px",
+    padding: "0 12px",
+    border: "1px solid transparent",
+    borderRadius: "2px",
+    textDecoration: "none",
+    textAlign: "center",
+    cursor: "pointer",
+    userSelect: "none",
+    minHeight: "40px",
+    lineHeight: "32px",
+    color: "#ffffff",
+    backgroundColor: "#0055D9",
+    width: "100%",
+    transition: ".3s",
+    "&:hover": {
+      backgroundColor: "#1370fc",
+    },
+  },
 }));
-const RegisterForm = ({
-  renderInputField,
-  showPassword,
-  handleClickShowPassword,
-}) => {
+const RegisterForm = ({ renderInputField, showPassword }) => {
   const classes = useStyles();
   return (
     <Grid item xs={6}>
@@ -89,7 +106,7 @@ const RegisterForm = ({
           <Grid item xs={12}>
             {renderInputField("email", "email", " Email", "text", "", "ltr")}
           </Grid>
-          <Grid item xs={12} style={{ position: "relative" }}>
+          <Grid item xs={12}>
             {renderInputField(
               "password",
               "password",
@@ -98,19 +115,15 @@ const RegisterForm = ({
               "",
               "ltr"
             )}
-            {/* <IconButton
-              style={{
-                position: "absolute",
-                right: "0",
-                top: "20px",
-                bottom: "0",
-              }}
-              aria-label="toggle password visibility"
-              onClick={handleClickShowPassword}
-              // onMouseDown={handleMouseDownPassword}
+          </Grid>
+          <Grid item xs={12} style={{ margin: "20px 0" }}>
+            <button
+              onClick={() => console.log("signup button clicked")}
+              className={classes.signupButton}
             >
-              {showPassword ? <Visibility /> : <VisibilityOff />}
-            </IconButton> */}
+              {" "}
+              Sign up{" "}
+            </button>
           </Grid>
         </Grid>
       </Paper>

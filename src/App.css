@@ -9,7 +9,7 @@ html {
   
 }
 .container {
-  background-image: url("./assets/register-bg-fce3e42828b656fb2b08f69c8e77d62e.jpg");
+  background-image:url("./assets/overlay.png"), url("./assets/register-bg-fce3e42828b656fb2b08f69c8e77d62e.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   min-height:100vh;
