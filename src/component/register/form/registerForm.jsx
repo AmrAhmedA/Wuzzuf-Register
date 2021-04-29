@@ -62,7 +62,7 @@ const useStyles = makeStyles((theme) => ({
     },
   },
 }));
-const RegisterForm = ({ renderInputField, showPassword, width }) => {
+const RegisterForm = ({ renderInputField, showPassword }) => {
   const classes = useStyles();
   return (
     <Grid item xs={12} sm={8} md={6}>

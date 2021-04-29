@@ -94,11 +94,11 @@ const DescriptionContainer = () => {
           </li>
         ))}
       </ul>
-
-      <h3 className={classes.descriptionHeader}>
-        Trusted by over 25,000 companies
-      </h3>
-
+      <Grid container>
+        <h3 className={classes.descriptionHeader}>
+          Trusted by over 25,000 companies
+        </h3>
+      </Grid>
       <div style={{ width: "448px", marginBottom: "24px" }}>
         {images.map((s, n) => (
           <img className={classes.image} src={s} alt="" key={n} />
