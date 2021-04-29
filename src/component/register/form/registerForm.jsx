@@ -38,7 +38,7 @@ const useStyles = makeStyles((theme) => ({
     },
   },
 }));
-const RegisterForm = () => {
+const RegisterForm = ({ renderInputField }) => {
   const classes = useStyles();
   return (
     <Grid item xs={6}>
@@ -58,6 +58,16 @@ const RegisterForm = () => {
           <div style={{ margin: "20px auto" }}>
             <DividerWithText>or</DividerWithText>
           </div>
+          <Grid item xs={12} md={5}>
+            {renderInputField(
+              "firstName",
+              "firstName",
+              "First Name",
+              "text",
+              "",
+              "ltr"
+            )}
+          </Grid>
         </Grid>
       </Paper>
     </Grid>

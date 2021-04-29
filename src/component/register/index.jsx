@@ -5,6 +5,7 @@ import DescriptionContainer from "./description";
 import RegisterForm from "./form/registerForm";
 import Input from "../common/input";
 import RegisterFormValidation from "./registerFormValidation";
+import InputField from "../common/inputField";
 const yup = require("yup");
 
 const useStyles = makeStyles((theme) => ({
@@ -33,7 +34,6 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 const initialFieldValues = {
-  username: "",
   firstname: "",
   lastname: "",
   email: "",
@@ -101,6 +101,33 @@ const RegisterContainer = () => {
       />
     );
   };
+
+  const renderInputField = (
+    id,
+    name,
+    label,
+    type,
+    placeholder,
+    direction,
+    float,
+    disabled
+  ) => {
+    return (
+      <InputField
+        id={id}
+        name={name}
+        label={label}
+        type={type}
+        placeholder={placeholder}
+        onChange={handleInputChange}
+        error={errors[name]}
+        value={values[name]}
+        direction={direction}
+        float={float}
+        disabled={disabled}
+      />
+    );
+  };
   return (
     <Grid
       container
@@ -112,7 +139,7 @@ const RegisterContainer = () => {
       <Grid container className={classes.wrapper}>
         <RegisterHeader />
         <DescriptionContainer />
-        <RegisterForm />
+        <RegisterForm renderInputField={renderInputField} />
       </Grid>
     </Grid>
   );
