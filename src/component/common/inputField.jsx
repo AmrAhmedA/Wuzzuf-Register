@@ -75,14 +75,15 @@ const InputField = memo((props) => {
       <div
         style={{
           color: "rgb(254, 48, 48)",
-          fontSize: " 12px",
-          letterSpacing: "-0.38px",
           marginTop: "6px",
         }}
       >
         <small
           id={id}
-          style={{ color: "red", fontSize: "0.8rem", fontWeight: "bold" }}
+          style={{
+            color: "rgb(254, 48, 48)",
+            fontSize: " 12px",
+          }}
         >
           {error && error}
         </small>

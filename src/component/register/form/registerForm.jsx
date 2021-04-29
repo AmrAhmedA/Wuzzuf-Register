@@ -6,6 +6,7 @@ const useStyles = makeStyles((theme) => ({
   formHeader: {
     marginBottom: "20px",
     fontSize: "20px",
+    textAlign: "center",
   },
   googleButton: {
     justifyContent: "center",
@@ -43,7 +44,7 @@ const RegisterForm = ({ renderInputField }) => {
   return (
     <Grid item xs={6}>
       <Paper variant="outlined" elevation={2} className={classes.formPaper}>
-        <Grid style={{ margin: "24px 32px", textAlign: "center" }}>
+        <Grid style={{ margin: "24px 32px" }}>
           <p className={classes.formHeader}>
             Sign Up and Start Applying For Jobs
           </p>
@@ -58,11 +59,36 @@ const RegisterForm = ({ renderInputField }) => {
           <div style={{ margin: "20px auto" }}>
             <DividerWithText>or</DividerWithText>
           </div>
-          <Grid item xs={12} md={5}>
+          <Grid container justify="space-between" spacing={2}>
+            <Grid item xs={12} md={6}>
+              {renderInputField(
+                "firstName",
+                "firstName",
+                "First Name",
+                "text",
+                "",
+                "ltr"
+              )}
+            </Grid>
+            <Grid item xs={12} md={6}>
+              {renderInputField(
+                "lastName",
+                "lastName",
+                "Last Name",
+                "text",
+                "",
+                "ltr"
+              )}
+            </Grid>
+          </Grid>
+          <Grid item xs={12}>
+            {renderInputField("email", "email", " Email", "text", "", "ltr")}
+          </Grid>
+          <Grid item xs={12}>
             {renderInputField(
-              "firstName",
-              "firstName",
-              "First Name",
+              "password",
+              "password",
+              " Password",
               "text",
               "",
               "ltr"
