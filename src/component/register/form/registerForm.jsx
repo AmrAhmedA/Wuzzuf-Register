@@ -1,7 +1,8 @@
 import React from "react";
-import { Grid, makeStyles, Paper } from "@material-ui/core";
+import { Grid, IconButton, makeStyles, Paper } from "@material-ui/core";
 import googleLogo from "../../../assets/googleLogo/4ed17f1480990b96fc90612ef2f5b5e7.svg";
 import DividerWithText from "../../common/divider";
+import { Visibility, VisibilityOff } from "@material-ui/icons";
 const useStyles = makeStyles((theme) => ({
   formHeader: {
     marginBottom: "20px",
@@ -84,7 +85,7 @@ const RegisterForm = ({ renderInputField }) => {
           <Grid item xs={12}>
             {renderInputField("email", "email", " Email", "text", "", "ltr")}
           </Grid>
-          <Grid item xs={12}>
+          <Grid item xs={12} style={{ position: "relative" }}>
             {renderInputField(
               "password",
               "password",
@@ -93,6 +94,19 @@ const RegisterForm = ({ renderInputField }) => {
               "",
               "ltr"
             )}
+            <IconButton
+              style={{
+                position: "absolute",
+                right: "0",
+                top: "20px",
+                bottom: "0",
+              }}
+              aria-label="toggle password visibility"
+              // onClick={handleClickShowPassword}
+              // onMouseDown={handleMouseDownPassword}
+            >
+              {true ? <Visibility /> : <VisibilityOff />}
+            </IconButton>
           </Grid>
         </Grid>
       </Paper>
