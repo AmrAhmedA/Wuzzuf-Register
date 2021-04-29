@@ -1,6 +1,7 @@
 import React from "react";
-import { Grid, makeStyles } from "@material-ui/core";
+import { Grid, makeStyles, withWidth } from "@material-ui/core";
 import WUZZUFLOGO from "../../assets/wuzzufLogo/wuzzufLogoSVG";
+import PropTypes from "prop-types";
 
 const useStyles = makeStyles((theme) => ({
   registerButton: {
@@ -30,8 +31,13 @@ const useStyles = makeStyles((theme) => ({
     margin: "32px 0",
   },
 }));
-const RegisterHeader = () => {
+const RegisterHeader = ({ width }) => {
   const classes = useStyles();
+  console.log(width);
+  const isTabletMode = () => {
+    return width === "xs" || width === "sm";
+  };
+  console.log(isTabletMode());
   return (
     <Grid
       container
@@ -40,7 +46,7 @@ const RegisterHeader = () => {
       alignItems="center"
       className={classes.headerContainer}
     >
-      <WUZZUFLOGO color="white" />
+      <WUZZUFLOGO color={isTabletMode() ? "rgb(0, 85, 217)" : "white"} />
       <a
         href="https://www.facebook.com/amrahmedgewaly/"
         className={classes.registerButton}
@@ -51,4 +57,8 @@ const RegisterHeader = () => {
   );
 };
 
-export default RegisterHeader;
+RegisterHeader.propTypes = {
+  width: PropTypes.oneOf(["lg", "md", "sm", "xl", "xs"]).isRequired,
+};
+
+export default withWidth()(RegisterHeader);
