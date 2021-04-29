@@ -33,11 +33,10 @@ const useStyles = makeStyles((theme) => ({
 }));
 const RegisterHeader = ({ width }) => {
   const classes = useStyles();
-  console.log(width);
+  // console.log(width);
   const isTabletMode = () => {
     return width === "sm" || width === "xs" ? true : false;
   };
-  console.log(isTabletMode());
   return (
     <Grid
       container

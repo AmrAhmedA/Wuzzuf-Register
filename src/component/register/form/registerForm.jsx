@@ -61,12 +61,20 @@ const useStyles = makeStyles((theme) => ({
       backgroundColor: "#1370fc",
     },
   },
+  paperBorder: {
+    borderRadius: "4px 4px 0 0",
+  },
 }));
 const RegisterForm = ({ renderInputField, showPassword }) => {
   const classes = useStyles();
   return (
     <Grid item xs={12} sm={8} md={6}>
-      <Paper variant="outlined" elevation={2} className={classes.formPaper}>
+      <Paper
+        variant="outlined"
+        elevation={2}
+        classes={{ rounded: classes.paperBorder }}
+        className={classes.formPaper}
+      >
         <Grid style={{ margin: "24px 32px" }}>
           <p className={classes.formHeader}>
             Sign Up and Start Applying For Jobs
@@ -131,8 +139,80 @@ const RegisterForm = ({ renderInputField, showPassword }) => {
               Sign up{" "}
             </button>
           </Grid>
+          <Grid>
+            <p
+              style={{
+                fontSize: "12px",
+                color: " #4D6182",
+                textAlign: "center",
+                borderBottom: "1px solid #D9DDE4",
+                padding: "17px 2px 8px",
+              }}
+            >
+              By signing up, you agree to our{" "}
+              <a
+                href="https://www.facebook.com/amrahmedgewaly/"
+                style={{ textDecoration: "none", color: "#0055D9" }}
+              >
+                Terms and Conditions
+              </a>
+            </p>
+          </Grid>
+          <Grid>
+            <p
+              style={{
+                textAlign: "center",
+                fontSize: "14px",
+                fontWeight: "600",
+                margin: "8px auto 24px",
+              }}
+            >
+              {" "}
+              Already on WUZZUF?
+              <a
+                href="https://www.facebook.com/amrahmedgewaly/"
+                style={{
+                  textDecoration: "none",
+                  color: "#0055D9",
+                  marginLeft: "8px",
+                }}
+              >
+                Sign in
+              </a>
+            </p>
+          </Grid>
         </Grid>
       </Paper>
+      <Grid
+        style={{
+          display: "flex",
+          justifyContent: "center",
+          background: "#E6EFFF",
+          height: "51px",
+          borderRadius: "0 0 4px 4px",
+        }}
+      >
+        <p
+          style={{
+            fontSize: "12px",
+            color: " #4D6182",
+            textAlign: "center",
+            padding: "17px 2px 8px",
+          }}
+        >
+          Looking to post jobs?
+          <a
+            href="https://www.facebook.com/amrahmedgewaly/"
+            style={{
+              textDecoration: "none",
+              color: "#0055D9",
+              marginLeft: "8px",
+            }}
+          >
+            Create an Employer Account.
+          </a>
+        </p>
+      </Grid>
     </Grid>
   );
 };
