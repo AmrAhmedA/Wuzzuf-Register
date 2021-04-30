@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/Wuzzuf-Register/static/css/main.0085a3a1.chunk.css",
+    "main.js": "/Wuzzuf-Register/static/js/main.711d6a86.chunk.js",
+    "main.js.map": "/Wuzzuf-Register/static/js/main.711d6a86.chunk.js.map",
+    "runtime-main.js": "/Wuzzuf-Register/static/js/runtime-main.278cf64b.js",
+    "runtime-main.js.map": "/Wuzzuf-Register/static/js/runtime-main.278cf64b.js.map",
+    "static/js/2.f279007d.chunk.js": "/Wuzzuf-Register/static/js/2.f279007d.chunk.js",
+    "static/js/2.f279007d.chunk.js.map": "/Wuzzuf-Register/static/js/2.f279007d.chunk.js.map",
+    "static/js/3.a306d5cc.chunk.js": "/Wuzzuf-Register/static/js/3.a306d5cc.chunk.js",
+    "static/js/3.a306d5cc.chunk.js.map": "/Wuzzuf-Register/static/js/3.a306d5cc.chunk.js.map",
+    "index.html": "/Wuzzuf-Register/index.html",
+    "static/css/main.0085a3a1.chunk.css.map": "/Wuzzuf-Register/static/css/main.0085a3a1.chunk.css.map",
+    "static/js/2.f279007d.chunk.js.LICENSE.txt": "/Wuzzuf-Register/static/js/2.f279007d.chunk.js.LICENSE.txt",
+    "static/media/4ed17f1480990b96fc90612ef2f5b5e7.4ed17f14.svg": "/Wuzzuf-Register/static/media/4ed17f1480990b96fc90612ef2f5b5e7.4ed17f14.svg",
+    "static/media/App.css": "/Wuzzuf-Register/static/media/register-bg-fce3e42828b656fb2b08f69c8e77d62e.fce3e428.jpg",
+    "static/media/visa-bacd39ad46073f187dc48d9d193b25d2.bacd39ad.png": "/Wuzzuf-Register/static/media/visa-bacd39ad46073f187dc48d9d193b25d2.bacd39ad.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.278cf64b.js",
+    "static/js/2.f279007d.chunk.js",
+    "static/css/main.0085a3a1.chunk.css",
+    "static/js/main.711d6a86.chunk.js"
+  ]
+}
