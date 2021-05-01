@@ -14,3 +14,7 @@ This project is made to refresh my mind and memory during my military army servi
 
 ## Mobile View
 <img src="https://github.com/AmrAhmedA/Wuzzuf-Register/blob/master/src/assets/device%20compatibility/Iphone%20X.jpg" width="360" height="740"> 
+
+# Live Deployment on gh-pages
+* [Wuzzuf Register](https://amrahmeda.github.io/Wuzzuf-Register/)
+ 
